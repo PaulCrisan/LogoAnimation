@@ -1,16 +1,20 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import logo, { ReactComponent as Logo } from "./logo2.svg";
 import "./App.css";
 import "./styles.scss";
 
 function App() {
   const [animation, setAnimation] = useState("");
+  const [IsAnimationEnded, setAnimationEnded] = useState(true);
 
   const handleEndAnimation = () => {
     setAnimation("");
+    setAnimationEnded(true);
   };
 
   const switchAnimation = animation => {
+    setAnimationEnded(false);
+
     switch (animation) {
       case "border":
         setAnimation("animate-border");
@@ -42,14 +46,30 @@ function App() {
             alt="logo"
           />
           <div className="buttons">
-            <button onClick={() => switchAnimation("border")}>
+            <button
+              disabled={IsAnimationEnded ? false : true}
+              onClick={() => switchAnimation("border")}
+            >
               ANIMATE BORDER
             </button>
-            <button onClick={() => switchAnimation("all")}>ANIMATE ALL</button>
-            <button onClick={() => switchAnimation("triangles")}>
+            <button
+              disabled={IsAnimationEnded ? false : true}
+              onClick={() => switchAnimation("all")}
+            >
+              ANIMATE ALL
+            </button>
+            <button
+              disabled={IsAnimationEnded ? false : true}
+              onClick={() => switchAnimation("triangles")}
+            >
               WAITING 1
             </button>
-            <button onClick={() => switchAnimation("both")}> WAITING 2 </button>
+            <button
+              disabled={IsAnimationEnded ? false : true}
+              onClick={() => switchAnimation("both")}
+            >
+              WAITING 2
+            </button>
           </div>
         </div>
       </header>
