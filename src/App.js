@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import logo, { ReactComponent as Logo } from "./logo2.svg";
+import Hsay from './components/HSay';
 import "./App.css";
 import "./styles.scss";
 
@@ -35,6 +36,17 @@ function App() {
 
   return (
     <div className="App">
+      <div style={{ height: '5em',paddingBottom: '15px', backgroundColor: '#282c34', paddingLeft: '20px', paddingTop:'15px' }}>
+       <div style={{width:'30%', height:'5em'}}>
+        <Hsay />
+
+       </div>
+
+      </div>
+      <div style={{ paddingBottom: '20vh', backgroundColor: '#282c34', paddingLeft: '20px', paddingRight: '15px', paddingTop: '10em'}}>
+        <Hsay />
+      </div>
+
       <header className="App-header">
         {/* <img src={logo} className="App-logo" alt="logo" /> */}
         <div className="navigationWrapper">

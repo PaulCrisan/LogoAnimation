@@ -1,0 +1,116 @@
+.logo-abc{
+
+    width: 100%;
+    height: 100%;
+
+  .letter-a,.letter-b,.letter-c{
+    stroke-dashoffset: 0;
+    stroke: green;
+    opacity: 0;
+      animation: letters-a-anim 9s ease-in infinite;
+  }
+  .letter-b{
+    animation-delay: 3s;
+    stroke: red;
+
+  }
+  .letter-c{
+    animation-delay: 6s;
+    stroke: orange;
+  }
+
+
+  .christmas-hat{
+    transform: rotate(10deg);
+    transform-origin: center;
+    transform-box: fill-box;
+    animation: rotate-hat 3s linear infinite;
+    
+  }
+}
+
+
+// @keyframes letters-animation {
+//   from {
+//     stroke-dasharray: 0 200;
+//     opacity: 1;
+
+//   }
+//   99% {
+//     stroke-dasharray: 200 0;
+//     opacity: 1;
+//   }
+//   to {
+//     stroke-dasharray: 200 0;
+//     opacity: 0;
+
+//   }
+// }
+@keyframes letters-a-anim {
+  from {
+    stroke-dasharray: 0 200;
+    opacity: 1;
+  }
+  33% {
+    stroke-dasharray: 200 0;
+    opacity: 1;
+  }
+  44% {
+    opacity: 0;
+  }
+  to {
+    opacity: 0;
+  }
+}
+@keyframes rotate-hat {
+  from {
+     transform: rotate(10deg);
+     transform-origin: center;
+     transform-box: fill-box;
+    
+  }
+  4% {
+     transform: rotate(20deg);
+     transform-origin: center;
+     transform-box: fill-box;
+    
+  }
+  8% {
+     transform: rotate(10deg);
+     transform-origin: center;
+     transform-box: fill-box;
+    
+  }
+  12% {
+     transform: rotate(20deg);
+     transform-origin: center;
+     transform-box: fill-box;
+    
+  }
+  16% {
+     transform: rotate(10deg);
+     transform-origin: center;
+     transform-box: fill-box;
+    
+  }
+  20% {
+     transform: rotate(20deg);
+     transform-origin: center;
+     transform-box: fill-box;
+    
+  }
+  96% {
+     transform: rotate(20deg);
+     transform-origin: center;
+     transform-box: fill-box;
+    
+  }
+  to {
+    transform: rotate(10deg);
+     transform-origin: center;
+     transform-box: fill-box;
+  
+
+    
+  }
+}
